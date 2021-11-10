@@ -1,7 +1,7 @@
 import React from 'react';
 import {AppBar, Box, Collapse, IconButton, styled, Toolbar, Typography} from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-import StyledLink from "../styles/StyledLink";
+import StyledLink from "./Styled/StyledLink";
 import SideNavPannel from "./SideNavPannel";
 
 const StyledNavbar = styled(AppBar)`

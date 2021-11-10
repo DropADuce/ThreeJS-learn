@@ -1,6 +1,6 @@
 import React from 'react';
 import {List, ListItem, styled} from "@mui/material";
-import StyledLink from "../styles/StyledLink";
+import StyledLink from "./Styled/StyledLink";
 import {routes} from "../Routes/Routes";
 
 const StyledList = styled(List)`
@@ -8,15 +8,18 @@ const StyledList = styled(List)`
   color: #f8f8f2;
   max-width: 300px;
   position: absolute;
+  z-index: 999;
 `
 
 const SideNavPannel = () => {
     return (
-        <StyledList component="nav" aria-label="mailbox folders">
+        <StyledList component="nav" aria-label="nav-drop-down">
             {routes.filter(r => !r.isMain).map(r => (
-                <ListItem button key={r.path}>
-                    <StyledLink to={r.path}>{r.name}</StyledLink>
-                </ListItem>
+                <StyledLink to={r.path}>
+                    <ListItem button key={r.path}>
+                        {r.name}
+                    </ListItem>
+                </StyledLink>
             ))}
         </StyledList>
     );
