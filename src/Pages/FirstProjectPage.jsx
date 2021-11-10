@@ -1,10 +1,9 @@
 import React from 'react';
-import Navbar from "../Components/Navbar";
+import PageWrapper from "../Components/HOC/PageWrapper";
 
 const FirstProjectPage = () => {
     return (
         <div>
-            <Navbar />
             <h1>
                 Тут будет первая 3д сцена!
             </h1>
@@ -12,4 +11,4 @@ const FirstProjectPage = () => {
     );
 };
 
-export default FirstProjectPage;
+export default PageWrapper(FirstProjectPage);

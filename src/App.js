@@ -1,15 +1,16 @@
 import React from 'react';
-import MainPage from "./Pages/MainPage";
 import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
-import FirstProjectPage from "./Pages/FirstProjectPage";
+import {routes} from "./Routes/Routes";
 
 const App = () => {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path='/' exact component={MainPage} />
-                <Route path='/first' component={FirstProjectPage}/>
-                <Redirect to={'/'} />
+                {routes.map(route => (
+                    <Route path={route.path} exact={route.exact} key={route.path}>
+                        {<route.page isMain={route.isMain || false}/>}
+                    </Route>))}
+                <Redirect to={'/'}/>
             </Switch>
         </BrowserRouter>
     );
