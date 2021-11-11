@@ -5,6 +5,6 @@ export default styled.div`
   top: 0;
   left: 0;
   right: 0;
-  margin: 0;
-  padding: 32px;
+  bottom: 0;
+  padding: 16px;
 `

@@ -15,8 +15,8 @@ const SideNavPannel = () => {
     return (
         <StyledList component="nav" aria-label="nav-drop-down">
             {routes.filter(r => !r.isMain).map(r => (
-                <StyledLink to={r.path}>
-                    <ListItem button key={r.path}>
+                <StyledLink to={r.path} key={r.path}>
+                    <ListItem button>
                         {r.name}
                     </ListItem>
                 </StyledLink>
